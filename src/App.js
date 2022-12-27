@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import { DatePicker } from "antd";
+
+import Navbar from './Navbar';
 
 function App() {
   return (
+    
     <Navbar />
-  
   );
 }
 
