@@ -6,6 +6,7 @@ return (
       <li>
         <a href="/SignIn">Pricing</a>
         <a href="/About">About</a>
+        
       </li>
     </ul>
   </nav>
