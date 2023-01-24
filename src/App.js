@@ -10,13 +10,15 @@ function App() {
     {
       id : 1,
       name : 'Abhishek D',
+      date : new Date(2022,3,7),
     },
   ];
   return (
     <div>
       <Navbar />
       <Linked />
-      <PropEx name = {example[0].name}></PropEx>
+      <PropEx name = {example[0].name}
+              date = {example[0].date}/>
     </div>
   );
 }
