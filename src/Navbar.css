@@ -1,0 +1,24 @@
+*{
+     
+}
+
+
+
+.nav{
+    
+    
+    max-height: auto;
+    padding: 30px;
+    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+
+}
+
+
+ul
+{
+    margin-bottom: 5px;
+    float: right;
+}

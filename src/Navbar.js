@@ -1,15 +1,85 @@
-function Navbar(){
+import React from 'react';
+import {BrowserRouter,Routes,Route,Link} from 'react-router-dom';
+import classes from './Navbar.css';
+import { Breadcrumb, Layout, Menu, theme,Button,Space } from 'antd';
+import SignIn from './SignIn';
+const { Header, Content, Footer } = Layout;
+
+
+export default function Navbar(){ 
+  const clickme = () => {<h3>87ogbubghoi7gbo8ig</h3>};
+   
 return (
-  <nav className="nav">
-    <h1>Hexaware</h1>
-    <ul>
-      <li>
-        <a href="/SignIn">Pricing</a>
-        <a href="/About">About</a>
+  
+  <> 
+  
+      
+  <Layout>
+      <Header style={{
+          position: 'sticky',
+          top: 0,
+          zIndex: 1,
+          width: '100%',
+        }}>
+        <div className="logo" />
+        <Menu
+          theme="dark"
+          mode="horizontal"
+          defaultSelectedKeys={['2']}
+        >
+          <Space wrap>
+          <Button type="primary" href="/SignIn">Link Button</Button>
+          
+          </Space>
+        </Menu>
         
-      </li>
-    </ul>
-  </nav>
+      </Header>
+      
+      <Content
+        className="site-layout"
+        style={{
+          padding: '0 50px',
+        }}
+      >
+        <Breadcrumb
+          style={{
+            margin: '16px 0',
+          }}
+        >
+          <Breadcrumb.Item>Home</Breadcrumb.Item>
+          <Breadcrumb.Item>List</Breadcrumb.Item>
+          <Breadcrumb.Item>App</Breadcrumb.Item>
+        </Breadcrumb>
+        <div
+          style={{
+            padding: 24,
+            minHeight: 380,
+            
+          }}
+        >
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+          unknown printer took a galley of type and scrambled it to make a type 
+          specimen book. It has survived not only five centuries, but also the leap into electronic 
+          typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+          software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+          unknown printer took a galley of type and scrambled it to make a type 
+          specimen book. It has survived not only five centuries, but also the leap into electronic 
+          typesetting, remaining , but also the leap into electronic 
+          typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+          software like Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+      </Content>
+      </Layout>
+    <BrowserRouter>
+    <div><Link  to={'/SignIn'}> </Link></div>
+    <Routes>
+    <Route path="/" element={localhost} />
+    <Route path="/SignIn" element={<SignIn/>}></Route>            
+    </Routes>
+    </BrowserRouter>
+      
+      
+</>
+
 );
 }
-export default Navbar;
