@@ -1,24 +1,17 @@
-*{
-     
-}
+.nav {
 
 
-
-.nav{
-    
-    
     max-height: auto;
     padding: 30px;
     overflow: auto;
     flex-wrap: wrap;
     justify-content: center;
-    
+
 
 }
 
 
-ul
-{
+ul {
     margin-bottom: 5px;
     float: right;
 }
