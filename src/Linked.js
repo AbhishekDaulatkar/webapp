@@ -38,7 +38,7 @@ export default function Linked(){
             class="badge-base__link LI-simple-link"
             href="https://in.linkedin.com/in/abhishek-daulatkar-3b328a194?trk=profile-badge"
           >
-            Abhishek Daulatkar
+           Abhishek Daulatkar
           </a>
         </div>
       </>
