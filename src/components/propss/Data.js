@@ -17,7 +17,7 @@ export default function Data ()  {
       title: 'New Desk (Wooden)',
       amount: 450
       
-    },
+    }
   ];
 
   // return React.createElement(

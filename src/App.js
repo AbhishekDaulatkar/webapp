@@ -4,6 +4,7 @@ import React from "react";
 import { FloatButton } from "antd";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
 import SignIn from "./SignIn";
+import DataPropFile from "./components/states/DataPropFile";
 const { Header, Content, Footer } = Layout;
 
 function App() {
@@ -12,8 +13,9 @@ function App() {
   };
   return (
     <>
-      <Navbar />
-      <FloatButton onClick={drinkitman} />
+      {/* <Navbar />
+      <FloatButton onClick={drinkitman} /> */}
+      <DataPropFile />
     </>
   );
 }
