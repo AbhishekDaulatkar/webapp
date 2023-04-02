@@ -29,7 +29,7 @@ export default function Data ()  {
 
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <h2>\"FLOW STARTS FROM DATA - Expenses - ExpenseItem \"</h2>
       <ExpenseItem items={expenses} />
       {/* <ExpenseItem title = {props.expenses[0].title} 
                 amount = {props.expenses[0].amount}/>
