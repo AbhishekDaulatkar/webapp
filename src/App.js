@@ -5,6 +5,7 @@ import { FloatButton } from "antd";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
 import SignIn from "./SignIn";
 import DataPropFile from "./components/states/DataPropFile";
+import StateUpdater from "./components/states/StateUpdater";
 const { Header, Content, Footer } = Layout;
 
 function App() {
@@ -12,10 +13,11 @@ function App() {
     alert("DRINK IT UP MANN....!!!");
   };
   return (
+  
     <>
-      {/* <Navbar />
-      <FloatButton onClick={drinkitman} /> */}
-      <DataPropFile />
+      <Navbar />
+      <FloatButton onClick={drinkitman} />
+      
     </>
   );
 }

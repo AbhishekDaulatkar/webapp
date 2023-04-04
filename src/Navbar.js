@@ -5,6 +5,9 @@ import { Breadcrumb, Layout, Menu, theme, Button, Space } from "antd";
 import SignIn from "./SignIn";
 import Home from "./Home";
 import FormV2 from "./components/FormV2.js";
+
+import DataPropFile from "./components/states/DataPropFile";
+
 const { Header, Content, Footer } = Layout;
 
 export default function Navbar() {
@@ -24,6 +27,9 @@ export default function Navbar() {
             <Space wrap>
               <Button type="primary" href="/SignIn">
                 Link Button
+              </Button>
+              <Button type="primary" href="/State">
+                Update Button
               </Button>
             </Space>
           </Menu>
@@ -72,9 +78,13 @@ export default function Navbar() {
         <div>
           <Link to={"/Home"}> </Link>
         </div>
+        <div>
+          <Link to={"/State"}> </Link>
+        </div>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/SignIn" element={<FormV2 />}></Route>
+          <Route path="/State" element={<DataPropFile />}></Route>
         </Routes>
       </BrowserRouter>
     </>

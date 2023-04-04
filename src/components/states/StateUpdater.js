@@ -1,29 +1,25 @@
 import { useState } from "react";
-import { Button, Space } from 'antd';
+import React from "react";
+import { Button } from 'antd';
 
-export default function StateUpdater(props){
+export default function StateUpdater(dataProp){
 
-    const[value,setValue] = useState(props.value);
-    console.alert('Executed!!+ value: ',value) ;
+    const[value,setValue] = useState(dataProp.value);
+    console.log('Executed!!+ value: ') ;
 
     const ClickHandler = () => {
-        setValue('MAGICC MFFF!!');
+        setValue('MAGICC_MFFF!!');
         console.log(value);
     }
 
 
     return(
-       <>
-       <Space wrap>
+       <div>
+       
        <Button type="primary" onClick= {ClickHandler}>Update State</Button>
-       </Space >
-       <h2>STATE NOW: {props.value}</h2>
        
+       <h2>STATE NOW: {value}</h2>
        
-       
-       
-       
-       
-       </>
+       </div>
     );
 }

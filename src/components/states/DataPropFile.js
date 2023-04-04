@@ -19,10 +19,10 @@ export default  function DataPropFile(){
         
         <div> 
            
-        <StateUpdater  key = {dataTransfer[0].key} 
+        <StateUpdater  
                        value ={dataTransfer[0].value} />
 
-        <StateUpdater  key = {dataTransfer[1].key} 
+        <StateUpdater  
                        value ={dataTransfer[1].value} />                
 
 
