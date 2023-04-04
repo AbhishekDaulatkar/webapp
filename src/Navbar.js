@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter,  Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Navigate, Routes, Route, Link } from "react-router-dom";
 import classes from "./Navbar.css";
 import { Breadcrumb, Layout, Menu, theme, Button, Space } from "antd";
 // import SignIn from "./SignIn";
@@ -73,8 +73,7 @@ export default function Navbar() {
       </Layout>
       <BrowserRouter>
         <div>
-          
-            <Link to={"/SignIn"}>SIGNIN </Link> 
+          <Link to={"/SignIn"}>SIGNIN </Link>
           
         </div>
         <div>
