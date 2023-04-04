@@ -1,12 +1,12 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter,  Routes, Route, Link } from "react-router-dom";
 import classes from "./Navbar.css";
 import { Breadcrumb, Layout, Menu, theme, Button, Space } from "antd";
-import SignIn from "./SignIn";
+// import SignIn from "./SignIn";
 import Home from "./Home";
 import FormV2 from "./components/FormV2.js";
-
 import DataPropFile from "./components/states/DataPropFile";
+import NotFound from "./NotFound";
 
 const { Header, Content, Footer } = Layout;
 
@@ -26,10 +26,10 @@ export default function Navbar() {
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
             <Space wrap>
               <Button type="primary" href="/SignIn">
-                Link Button
+                SignIn
               </Button>
               <Button type="primary" href="/State">
-                Update Button
+                Update
               </Button>
             </Space>
           </Menu>
@@ -73,7 +73,9 @@ export default function Navbar() {
       </Layout>
       <BrowserRouter>
         <div>
-          <Link to={"/SignIn"}> </Link>
+          
+            <Link to={"/SignIn"}>SIGNIN </Link> 
+          
         </div>
         <div>
           <Link to={"/Home"}> </Link>
@@ -81,10 +83,12 @@ export default function Navbar() {
         <div>
           <Link to={"/State"}> </Link>
         </div>
+
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/SignIn" element={<FormV2 />}></Route>
           <Route path="/State" element={<DataPropFile />}></Route>
+          <Route exact path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </>
