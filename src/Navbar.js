@@ -7,6 +7,7 @@ import Home from "./Home";
 import FormV2 from "./components/FormV2.js";
 import DataPropFile from "./components/states/DataPropFile";
 import NotFound from "./NotFound";
+import InputForm from "./components/forms/InputForm";
 
 const { Header, Content, Footer } = Layout;
 
@@ -30,6 +31,9 @@ export default function Navbar() {
               </Button>
               <Button type="primary" href="/State">
                 Update
+              </Button>
+              <Button type="primary" href="/Form">
+                Form
               </Button>
             </Space>
           </Menu>
@@ -87,6 +91,7 @@ export default function Navbar() {
           <Route exact path="/" element={<Home />} />
           <Route path="/SignIn" element={<FormV2 />}></Route>
           <Route path="/State" element={<DataPropFile />}></Route>
+          <Route path="/Form" element={<InputForm />}></Route>
           <Route exact path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
