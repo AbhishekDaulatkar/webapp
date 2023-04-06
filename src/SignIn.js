@@ -1,5 +1,5 @@
 import React from "react";
-import FormEx from "./components/FormEx";
+import FormEx from "./components/redundant/FormEx";
 import { Card, Col, Row } from "antd";
 export default function SignIn() {
   return (
