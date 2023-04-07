@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-export default function InputForm() {
+const InputForm = (props) => {
   const [title,setTitle] = useState('');
   const [name, setName] = useState("");
   const [Dob, setDob] = useState("");
@@ -74,14 +74,14 @@ export default function InputForm() {
        
 
        const submitHandler = (event) =>{
-          event.preventDefault(); // To prvent the default action.
+          event.preventDefault(); // To prevent the default action.
                   const expenseData = {
             // ...userInput,
             Title: title,
             Name: name,
             Date : new  Date(Dob)
-          }
-          console.log(expenseData);
+          };
+          props.onSaveExpenseData(expenseData);
           setDob("");
           setName("");
           setTitle("");
@@ -120,3 +120,4 @@ export default function InputForm() {
     </>
   );
   }
+  export default InputForm;

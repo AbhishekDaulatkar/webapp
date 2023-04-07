@@ -1,10 +1,22 @@
 import React from "react";
-export default function FormDataOutput(dataPass) {
-    return (
-      <>
-        <div>{dataPass.title}</div>
-        <div>{dataPass.name}</div>
-        <div>{dataPass.dob}</div>
-      </>
-    );
-}
+
+import InputForm from "./InputForm";
+
+
+const FormDataOutput = (props) => {
+  const saveExpenseDataHandler = (enteredExpenseData) => {
+    const expenseData = {
+      ...enteredExpenseData,
+      id: Math.random().toString(),
+    };
+    console.log(expenseData);
+  };
+
+  return (
+    <div className="new-expense">
+      <InputForm onSaveExpenseData = {saveExpenseDataHandler}/>
+    </div>
+  );
+};
+
+export default FormDataOutput;

@@ -2,10 +2,12 @@ import "./App.css";
 import Navbar from "./Navbar.js";
 import React from "react";
 import { FloatButton } from "antd";
+import InputForm from "./components/forms/InputForm";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
 import SignIn from "./SignIn";
 import DataPropFile from "./components/states/DataPropFile";
 import StateUpdater from "./components/states/StateUpdater";
+import FormDataOutput from "./components/forms/FormDataOutput";
 const { Header, Content, Footer } = Layout;
 
 function App() {
@@ -13,11 +15,10 @@ function App() {
     alert("DRINK IT UP MANN....!!!");
   };
   return (
-  
     <>
       <Navbar />
       <FloatButton onClick={drinkitman} />
-      
+      <FormDataOutput />
     </>
   );
 }
