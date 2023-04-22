@@ -79,7 +79,7 @@ const InputForm = (props) => {
             // ...userInput,
             Title: title,
             Name: name,
-            Date : new  Date(Dob)
+            Date : new  Date(Dob),
           };
           props.onSaveExpenseData(expenseData);
           setDob("");

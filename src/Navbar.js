@@ -9,9 +9,17 @@ import DataPropFile from "./components/states/DataPropFile";
 import NotFound from "./NotFound";
 import InputForm from "./components/forms/InputForm";
 
+
 const { Header, Content, Footer } = Layout;
 
 export default function Navbar() {
+  // const saveExpenseDataHandler = (enteredExpenseData) => {
+  //   const expenseData = {
+  //     ...enteredExpenseData,
+  //     id: Math.random().toString(),
+  //   };
+  //   console.log(expenseData);
+  // };
   return (
     <>
       <Layout>
@@ -91,7 +99,7 @@ export default function Navbar() {
           <Route exact path="/" element={<Home />} />
           <Route path="/SignIn" element={<FormV2 />}></Route>
           <Route path="/State" element={<DataPropFile />}></Route>
-          <Route path="/Form" element={<InputForm />}></Route>
+          <Route path="/Form" element={<InputForm /*onSaveExpenseData = {saveExpenseDataHandler}*/ />}></Route>
           <Route exact path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -14,11 +14,16 @@ function App() {
   const drinkitman = () => {
     alert("DRINK IT UP MANN....!!!");
   };
+
+  const expenseHandler = (expense) => {
+   console.log(expense);
+
+  }
   return (
     <>
       <Navbar />
       <FloatButton onClick={drinkitman} />
-      <FormDataOutput />
+      <FormDataOutput onAddExpense={expenseHandler} />
     </>
   );
 }

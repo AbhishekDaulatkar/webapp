@@ -7,13 +7,13 @@ const FormDataOutput = (props) => {
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
       ...enteredExpenseData,
-      id: Math.random().toString(),
+      id: Math.random().toString()
     };
-    console.log(expenseData);
+    
+    props.onAddExpense(expenseData);
   };
-
   return (
-    <div className="new-expense">
+    <div >
       <InputForm onSaveExpenseData = {saveExpenseDataHandler}/>
     </div>
   );
