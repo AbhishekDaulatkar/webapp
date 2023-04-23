@@ -8,6 +8,7 @@ import FormV2 from "./components/FormV2.js";
 import DataPropFile from "./components/states/DataPropFile";
 import NotFound from "./NotFound";
 import InputForm from "./components/forms/InputForm";
+import Data from "./components/propss/Data";
 
 
 const { Header, Content, Footer } = Layout;
@@ -42,6 +43,9 @@ export default function Navbar() {
               </Button>
               <Button type="primary" href="/Form">
                 Form
+              </Button>
+              <Button type="primary" href="/PropList">
+                PROP
               </Button>
             </Space>
           </Menu>
@@ -86,7 +90,6 @@ export default function Navbar() {
       <BrowserRouter>
         <div>
           <Link to={"/SignIn"}>SIGNIN </Link>
-          
         </div>
         <div>
           <Link to={"/Home"}> </Link>
@@ -97,9 +100,16 @@ export default function Navbar() {
 
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/PropList" element={<Data />} />
           <Route path="/SignIn" element={<FormV2 />}></Route>
           <Route path="/State" element={<DataPropFile />}></Route>
-          <Route path="/Form" element={<InputForm /*onSaveExpenseData = {saveExpenseDataHandler}*/ />}></Route>
+
+          <Route
+            path="/Form"
+            element={
+              <InputForm /*onSaveExpenseData = {saveExpenseDataHandler}*/ />
+            }
+          ></Route>
           <Route exact path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

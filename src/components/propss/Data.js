@@ -1,3 +1,5 @@
+import ExpenseItem from "./ExpenseItem";
+import Expenses from "./Expenses";
 export default function Data ()  {
   const expenses = [
     {
@@ -30,7 +32,7 @@ export default function Data ()  {
   return (
     <div>
       <h2>\"FLOW STARTS FROM DATA - Expenses - ExpenseItem \"</h2>
-      <ExpenseItem items={expenses} />
+      <Expenses items={expenses} />
       {/* <ExpenseItem title = {props.expenses[0].title} 
                 amount = {props.expenses[0].amount}/>
     <ExpenseItem title = {props.expenses[1].title} 

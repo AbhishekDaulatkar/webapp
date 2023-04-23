@@ -1,9 +1,11 @@
 import Expenses from './Expenses.js'
 
 export default function ExpenseItem(props){
-    return (<>
+    return (
+    <>
         <div> {props.title}  </div>
-        <div>$${props.amount}</div>
-        </>
+        <div>{props.amount}</div>
+        
+    </>
     );
 }
